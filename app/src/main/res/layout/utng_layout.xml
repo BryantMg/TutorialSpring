@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f20d9"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Universidad Tecnológica del Norte de Guanajuato"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:background="#12a2ce"
+        android:textStyle="bold"
+        android:id="@+id/textView" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/maxresdefault"
+        android:paddingTop="1dp"
+        android:id="@+id/imv_chica"
+        android:layout_above="@+id/textView4"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡La UTNG es tu mejor opción para estudiar en el bajio!"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:background="#2635e1"
+         />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/utnguno"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nuestros 20 años de experiencia nos respaldan"
+        android:textColor="#38ea27"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:background="#2635e1"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/web"
+        android:onClick="pagutng"
+        android:text="Visita nuestra página"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="vermapa"
+        android:drawableLeft="@drawable/location"
+        android:text="Ver ubicación"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="vergaleria"
+        android:drawableLeft="@drawable/build"
+        android:text="Instalaciones"
+        />
+
+    <Button
+        android:id="@+id/btn_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/grant"
+        android:text="Becas"
+        />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Servicios"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="30dp"
+        android:background="#38ea27"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_soft"
+            android:drawableLeft="@drawable/development"
+            android:onClick="pagutng"
+            android:text="Desarrollo Software"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_agro"
+            android:onClick="vermapa"
+            android:drawableLeft="@drawable/corn"
+            android:text="Agricultura"
+            />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="¡Conocenos!"
+        android:drawableTop="@drawable/video"
+        android:onClick="videoPromo"
+        />
+
+
+</LinearLayout>
+</ScrollView>

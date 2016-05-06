@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aed3f1"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desarrollo de Software"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:background="#219bff"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="En nuestro Centro Avanzado de Desarrollo de Software (CADES) ofrecemos:"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="•Desarrollo de software de acuerdo a la necesidad.\n•Diseño de portales web\n•Creación de tiendas de comercio electrónico.\n•Diseño multimedia"
+        />
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorBackDark"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:id="@+id/txv_titulo"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_preferencias"
+        android:text="Configuraciones"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Configuraciones actuales"
+        android:id="@+id/btn_listar"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+
+        >
+
+        <ImageButton
+            android:id="@+id/btn_backhome"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/backhome"
+            android:onClick="irMenu"
+            android:paddingLeft="100px"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver a inicio"
+            android:textColor="#000"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

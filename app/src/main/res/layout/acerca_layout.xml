@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/colorBackground">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/aboutbig"
+        />
+
+
+    <TextView
+        android:id="@+id/titulo_informacion_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:text="Desarrollador"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"
+        android:textStyle="bold"
+
+        android:paddingTop="15dp"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardUseCompatPadding="true"
+        >
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="16dp"
+            android:rowCount="2">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="32dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/developer" />
+
+            <TextView
+                android:id="@+id/texto_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="32dp"
+                android:text="Bryant Moreno"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/inobx" />
+
+            <TextView
+                android:id="@+id/texto_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="bryant.mg10gmail.com"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </GridLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+    <TextView
+        android:id="@+id/casaestudios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:text="Casa de estudios"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"
+        android:textStyle="bold"
+
+        android:paddingTop="15dp"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardUseCompatPadding="true"
+        >
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:padding="10dp"
+            android:rowCount="1">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginRight="8dp"
+                android:src="@drawable/univ" />
+
+            <TextView
+                android:id="@+id/txt_escuela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:text="Universidad Tecnológica del Norte de Guanajuato"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+
+
+        </GridLayout>
+    </android.support.v7.widget.CardView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="Ver en mapa"
+        android:textSize="10dp"
+        android:background="#2cadf2"
+        android:onClick="maps"
+        />
+
+
+    <TextView
+        android:id="@+id/materia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:text="Materia"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"
+        android:textStyle="bold"
+
+        android:paddingTop="15dp"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardUseCompatPadding="true"
+        >
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:columnCount="2"
+            android:padding="10dp"
+            android:rowCount="1">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginRight="8dp"
+                android:src="@drawable/book" />
+
+            <TextView
+                android:id="@+id/txt_materia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:text="Desarrollo de aplicaciones III"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </GridLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/maestro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:text="Facilitador"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"
+        android:textStyle="bold"
+
+        android:paddingTop="15dp"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardUseCompatPadding="true"
+        >
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:columnCount="2"
+            android:padding="10dp"
+            android:rowCount="1">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginRight="8dp"
+                android:src="@drawable/maestro" />
+
+            <TextView
+                android:id="@+id/txt_maesto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:text="Ing. Anastacio Rodriguez"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </GridLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/android"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="55dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/backhome"
+                android:onClick="irMenu"
+                android:paddingLeft="100px"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volver a inicio"
+                android:textColor="#000"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            >
+
+            <ImageButton
+                android:id="@+id/btn_comnts"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/mail"
+                android:onClick="correo"
+                android:paddingLeft="100px"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comentarios al \n  Desarrollador"
+                android:textColor="#000"
+                />
+        </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>
+    </ScrollView>

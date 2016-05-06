@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:paddingTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Felicidades ingresaste satisfactoriamente \n Da clic para iniciar la experiencia"
+        android:textSize="25dp"
+        android:textColor="#e92330"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_inicio"
+        android:text="Inicio"
+        android:background="@color/colorButton"
+        android:onClick="inicio"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:background="@drawable/springlogo"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+
+
+</LinearLayout>

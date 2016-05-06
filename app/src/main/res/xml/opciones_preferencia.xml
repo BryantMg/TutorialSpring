@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/conf_basicas">
+        <EditTextPreference
+            android:key="nombre_usuario"
+            android:title="Cambia tu nombre de usuario"
+            android:summary="Cambia tu nombre de usuario"
+            android:dialogTitle="Teclea tu nuevo nombre de usuario"
+            />
+
+        <EditTextPreference
+            android:key="ip_bd"
+            android:title="Cambia correo"
+            android:summary="Guarda un correo para tu certificado"
+            android:dialogTitle="Teclea nuevo correo"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/conf_secundarias">
+        <CheckBoxPreference
+            android:key="mayor_18"
+            android:title="Mostrar notificaciones"
+            android:summary="Habilita las notificaciones"/>
+        <ListPreference
+            android:key="idioma"
+            android:title="@string/idioma"
+            android:summary="@string/cambia_idioma"
+            android:dialogTitle="@string/idioma"
+            android:entryValues="@array/nombre_idioma"
+            android:entries="@array/nombre_idioma"
+            />
+
+        <Preference
+            android:title="Regresar"
+            android:key="@string/btn_regresar"
+            android:summary="Regresar a la configuración"
+            />
+
+
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

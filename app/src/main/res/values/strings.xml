@@ -1,0 +1,194 @@
+<resources>
+    <string name="app_name">SpringTutorial</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="preferencias">Crear preferencias</string>
+    <string name="nuevo_nombre">Teclea el nuevo nombre de la aplicación</string>
+    <string name="cambiar_nombre">Cambia el nombre de la aplicación</string>
+    <string name="cambio_ip">Cada que cambia tu IP puedes actualizarla</string>
+    <string name="nueva_ip">Teclea nueva IP</string>
+    <string name="conf_basicas">Configuraciones básicas</string>
+    <string name="conf_secundarias">Configuraciones secundarias</string>
+    <string name="contenido">Contenido habilitado para mayores de edad</string>
+    <string name="mayores_edad">Contenido para mayores de edad</string>
+    <string name="idioma">Selecciona el idioma de la aplicación</string>
+    <string name="cambia_idioma">Cambia el idioma de la aplicación</string>
+    <string name="listar_preferencias">Listar Preferencias</string>
+    <string name="regresar">regresar</string>
+    <string name="regresar_summary">Regresar a la principal</string>
+    <string name="btn_regresar">btn_regresar</string>
+    <string name="position">posicion</string>
+
+
+    //Capitulos
+    <string name="introduccion_spring">
+        Spring Framework es una plataforma Java que proporciona un amplio soporte de infraestructura para el desarrollo de aplicaciones Java.
+        Spring maneja la infraestructura para que pueda centrarse en su aplicación.
+
+        Spring le permite construir aplicaciones de "plain old Java objects" (POJO) y para aplicar servicios de la empresa de forma no invasiva para POJOs.
+        Esta capacidad está relacionada con el modelo de programación Java SE y total y parcial de Java EE.\n
+
+            \n
+            Ejemplos de cómo usted, como un desarrollador de aplicaciones, puede utilizar la ventaja plataforma de Spring:\n
+            • Hacer un método Java ejecuta en una transacción de base de datos sin tener que lidiar con las API de transacción.\n
+            • Hacer un método local de Java a un procedimiento remoto sin tener que lidiar con las API remotas.\n
+            • Hacer un método local de Java una operación de gestión sin tener que lidiar con las API JMX.\n
+            • Hacer un método Java local de un controlador de mensajes sin tener que lidiar con las API de JMS.\n
+
+            \n
+            Spring Framework es una solución ligera y un potencial de una ventanilla única para crear sus aplicaciones preparadas para la empresa.
+            Sin embargo, Spring es modular, lo que permite utilizar sólo las piezas que usted necesita, sin tener que poner en el resto.
+            Puede utilizar el contenedor IoC, con Struts en la parte superior, pero también se puede utilizar sólo el código de integración Hibernate o de la capa de abstracción JDBC .\n
+
+
+    </string>
+
+    <string name="inyeccion_dependencias">
+        El patrón de Inyección de Dependencias, también conocido como de Inversión de Control es un patrón que tiene como
+        finalidad conseguir un código mas desacoplado, que nos facilitará las cosas a la hora de hacer Tests y además
+        nos permite cambiar partes del sistema más fácilmente en caso de que fuese necesario./n
+              \n Tener el código desacoplado nos permite cambiar las dependencias en tiempo de ejecución basándonos en cualquier factor
+                que considerásemos, para ello necesitaríamos un Inyector o Contenedor que sería el encargado de
+                inyectar las dependencias correctas en el momento necesario.\n 
+
+              \n Siguiendo el patrón de Inyección de Dependencias ( DI, Dependency Injection ) los componentes declaran sus dependencias,
+        pero no se encargan de conseguirlas, ahí es donde entra el Contenedor de Spring, que en nuestras aplicaciones de Spring
+        será el encargado de conseguir e inyectar las dependencias a los objetos.\n 
+
+              \n
+               El siguiente código muestra un ejemplo de clase que no usa el patrón de Inyección de Dependencia,
+        además de estar fuertemente acopladas las dependencias, es la propia clase la que se encarga de crear una instancia de la dependencia:\n
+
+        \npublic class GeneradorPlaylist {
+
+        \nprivate BuscadorCanciones buscadorCanciones;
+        \npublic GeneradorPlaylist(){
+        \n   this.buscadorCanciones = new BuscadorCanciones();
+        \n}
+        \n //Resto de métodos de la clase
+        \n}
+
+
+
+
+
+
+
+    </string>
+
+
+    <string name="beans">
+    ¿Qué es un bean? \n
+        La wikipedia define bean como un componente de software que tiene la particularidad de ser reutilizable.
+        En java cumplen varios criterios:\n
+
+        • Implementación en serie.\n
+        • Tener todos sus atributos privados (private).\n
+        • Tener métodos set() y get() públicos de los atributos privados que nos interese.\n
+        • Tener un constructor público por defecto.\n \n
+
+        Beans en Spring \n
+        A diferencia de los bean convencionales que representan una clase, la particularidad de los beans de Spring
+        es que son objetos creados y manejados por el contenedor Spring.
+
+        El contenedor de beans de Spring \n
+        El contenedor se encuentra en el núcleo del marco de trabajo de Spring y utiliza inyección de dependencias para gestionar los componentes que forman la aplicación. Se encarga de varias tareas, como crear, conectar y alojar los objetos definidos por los beans. Además hace de dispensador proporcionando beans por peticion. El contenedor carga las definiciones de beans escritas en archivos XML estructurados de forma ordenada. \n
+        Tipos de contenedor de Spring: \n
+
+        • Fabrica de beans (bean factory): contenedor sencillo con soporte básico de inyeccion de dependencias. \n
+
+        • Contexto de aplicación (aplication context): es una implementacion de la bean factory que proporciona opciones avanzadas como por ejemplo: medios para resolver mensajes de texto e internalizacion, publicación de beans registrados como receptores o formas genéricas de abrir recursos de archivo. \n
+
+        Curso de vida de la bean en Spring \n
+        Otra diferencia de los beans de Spring es que a éstos se añade un ciclo nuevo para que la bean sepa cual es su contexto de aplicación. \n \n Podemos ordenar las fases de la vida de un bean de la siguiente forma: \n
+
+        1.- Instanciación \n
+        2.- Inyección de las propiedades \n
+        3.- Nombre del bean \n
+        4.- Nombre de la fábrica \n
+        5.- Postprocesado (pre inicializacion) \n
+        6.- Inicialización \n
+        7.- Postprocesado (post inicialización) \n
+        8.- Bean listo para uso \n
+        9.- Destrucción \n
+
+
+
+    </string>
+
+    <string name="colecciones">
+
+        Java tiene desde la version 1.2 todo un juego de clases e interfaces para guardar colecciones de objetos.
+        En él, todas las entidades conceptuales están representadas por interfaces, y las clases se usan para proveer
+        implementaciones de esas interfaces. Una introducción conceptual debe entonces enfocarse primero en esas interfaces. \n
+
+        La interfaz más importante es Collection. Una Collection es todo aquello que se puede recorrer (o “iterar”) y de lo que se puede
+        saber el tamaño. Muchas otras clases extenderán Collection imponiendo más restricciones y dando más funcionalidades.
+        Es de notar que el requisito de “que se sepa el tamaño” hace inconveniente utilizar estas clases con colecciones de objetos
+        de las que no se sepa “a priori” la cantidad (ésto podría considerarse una limitación de este framework). \n
+
+     Spring ofrece cinco tipos de elementos para configuración de colecciones: \n
+        • list -> Wiring de una lista de valores, que permite duplicados y mantienen un orden. \n
+        • array -> Wiring de un arreglo de objetos, que permite duplicados y mantienen un orden. \n
+        • set -> Wiring de un conjunto de valores, asegurando que no hay duplicados. \n
+        • map -> Wiring de una colección de pares nombre-valor donde el nombre y el valor pueden ser de cualquier tipo. \n
+        • props -> Wiring de una colección de pares nombre-valor donde el nombre y el valor son de tipo String.
+
+ 
+
+    </string>
+
+    <string name="hibernate">
+            \n
+            Hibernate es un marco de trabajo para persistencia de datos (en Java).\n
+            Hibernate permite manejar la persistencia de los datos en Java, haciendo abstracción de la base de
+            datos. Hibernate se encargará de dar los datos al código Java, y se encargará de mantener la base de
+            datos al día, si se utiliza una base de datos. Es una implementación de JPA.
+            \n
+
+            \n
+            Hibernate viene preinstalado en los servidores Jboss y Glassfish.
+            \n
+
+            \n
+            Hibernate utiliza un lenguaje de consulta potente (HQL) que se parece a SQL. Sin embargo, comparado
+            con SQL, HQL es completamente orientado a objetos y comprende nociones como herencia, polimorfismo
+            y asociación.
+            \n 
+
+    </string>
+
+    <!--TABS -->
+    <string name="tab_foro">Video Ayuda</string>
+    <string name="pestaña_pulsada">"Pestaña Pulsada: "</string>
+    <string name="titulo_tab_capitulos">CAPITULOS</string>
+    <string name="titulo_tab_Videos">VIDEOS</string>
+    <string name="titulo_tab_Material">MATERIAL</string>
+    <string name="titulo_tab_perfil">PERFIL</string>
+    <string name="titulo_tab_direcciones">DIRECCIONES</string>
+    <string name="titulo_tab_desarrollador">DESARROLLADOR</string>
+    <string name="titulo_tab_tarjetas">TARJETAS</string>
+    <string name="title_activity_maps">Map</string>
+    <!--TABS -->
+</resources>

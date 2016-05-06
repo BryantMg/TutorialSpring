@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aef1bf"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agricultura Protegida"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:background="#32ff43"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Ofrecemos capacitación y asesoría en:"
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Educación ambiental\n• Jardinería Xerofítica\n• Reproducción y mantenimiento de cactáceas.\n• Cultivo de tejidos vegetales.\n• Huertos urbanos.\n• Elaboración de composta.\n• Producción de lombricomposta."
+            />
+
+    </LinearLayout>
