@@ -147,8 +147,8 @@ public class DbHelper extends SQLiteOpenHelper{
                 "messages", "<h:message for=\"mensaje\" />", "<h:messages", "<h:message for=\"mensaje\" />");
         this.addQuestion(q1);
 
-        q1 = new Pregunta("¿Quien maneja los Beans en Spring?",
-                "El IDE","El contenedor","Los constructores","El contenedor");
+        q1 = new Pregunta("¿Que le falta al código \n  id=\"persona\" class=\"info.hcosta.ejemplo.Persona\"?",
+                "Constructor","El contenedor","la etiqueta <bean></bean>","la etiqueta <bean></bean>");
         this.addQuestion(q1);
 
         q1 = new Pregunta("¿Que utiliza el contenedor para gestionar los componentes?", "Inyección de dependencias",

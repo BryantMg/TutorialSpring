@@ -279,7 +279,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/games"
-                android:onClick="juego"
+                android:onClick="games"
                 android:paddingLeft="100px"
                 />
 
@@ -306,6 +306,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Información Institucional"
+        android:layout_gravity="center"
+        android:textColor="#000"
+        />
+
+    <ImageButton
+        android:id="@+id/btn_Notify"
+        android:layout_width="90px"
+        android:layout_height="90px"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/notifi"
+        android:onClick="notificacion"
+        android:paddingLeft="100px"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notificaciones"
         android:layout_gravity="center"
         android:textColor="#000"
         />

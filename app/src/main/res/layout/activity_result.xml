@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResultActivity"
+
     android:background="@color/colorBackground">
 
     <RelativeLayout
@@ -12,7 +12,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+
+        >
 
         <RatingBar
             android:id="@+id/ratingBar1"
@@ -20,7 +22,13 @@
             android:layout_height="wrap_content"
             android:numStars="5"
             android:stepSize="1.0"
-            android:rating="0.0"/>
+            android:rating="0.0"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:isIndicator="true"
+            />
 
         <Button
             android:layout_width="match_parent"
@@ -35,7 +43,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="92dp"
             android:onClick="playagain"
-            android:textColor="@color/cardview_light_background"
+            android:textColor="#000"
+            android:background="@color/colorButton"
             />
         <Button
             android:layout_width="wrap_content"
@@ -43,8 +52,8 @@
             android:text="Grafica"
             android:id="@+id/btn_grafica"
             android:onClick="irGrafica"
-            android:textColor="@color/cardview_light_background"
-
+            android:textColor="#000"
+            android:background="@color/colorButton"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
@@ -62,6 +71,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="79dp"
         />
+
 
 
 </RelativeLayout>

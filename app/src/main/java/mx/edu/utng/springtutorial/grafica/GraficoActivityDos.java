@@ -12,14 +12,16 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.formatter.PercentFormatter;
-
-
-
+import com.github.mikephil.charting.utils.ColorTemplate;
 
 
 import java.util.ArrayList;
@@ -27,23 +29,27 @@ import java.util.ArrayList;
 import mx.edu.utng.springtutorial.R;
 import mx.edu.utng.springtutorial.correo.EnviarCorreoActivity;
 import mx.edu.utng.springtutorial.login.LoginInterno;
+import mx.edu.utng.springtutorial.login.PreguntaActivity;
 
 /**
  * Created by Bryant Moreno on 30/03/2016.
  */
 public class GraficoActivityDos extends Activity implements View.OnClickListener{
 
-
-
     private GraficaHelperDos sqlite;
     private PieChart pieChart;
     private TableLayout table_layout;
+    private BarChart barChart;
+    private PreguntaActivity puntos;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grafica);
         pieChart = (PieChart) findViewById(R.id.pieChart);
+        barChart = (BarChart)findViewById(R.id.barChart);
+
         table_layout = (TableLayout) findViewById(R.id.tableLayout1);
         sqlite = new GraficaHelperDos(this);
         setDataChart();//grafico
@@ -57,47 +63,32 @@ public class GraficoActivityDos extends Activity implements View.OnClickListener
         ArrayList<GraficaTopic> candidatos = sqlite.getCandidatos();
         sqlite.closeConnection();
 
-        //propiedades de grafico
-        pieChart.setRotationEnabled(true);
-        pieChart.animateXY(1000, 1000);
-        pieChart.setHoleRadius(36f);
-        pieChart.setDescription("");
 
-        //valores
-        ArrayList<Entry> yVals = new ArrayList<Entry>();
-        ArrayList<String> xVals = new ArrayList<String>();
-        //colores de la torta
-        ArrayList<Integer> colors = new ArrayList<Integer>();
-        colors.add(Color.YELLOW);
-        colors.add(Color.RED);
-        colors.add(Color.GREEN);
-        colors.add(Color.CYAN);
-        colors.add(Color.MAGENTA);
+        ArrayList<BarEntry> entries = new ArrayList<>();
+        ArrayList<String> labels = new ArrayList<String>();
+
 
         sqlite.openConnection();
         float total_votos = sqlite.getTotalVotos();
         sqlite.closeConnection();
 
-        //ingresa datos a grafico
+
+
+
         for (int index = 0; index < candidatos.size(); index++) {
-            float votos = (candidatos.get(index).getVotos() / total_votos) * 100f;
-            yVals.add(new Entry(votos, index));
-            xVals.add(candidatos.get(index).getSigla());
+            float votos = (candidatos.get(index).getVotos());
+            entries.add(new BarEntry(votos,index));
+            labels.add(candidatos.get(index).getSigla());
         }
 
-        PieDataSet dataSet = new PieDataSet(yVals, "");
-        dataSet.setSliceSpace(3f);
-        dataSet.setSelectionShift(5f);
-        dataSet.setColors(colors);
 
-        PieData data = new PieData(xVals, dataSet);
-        data.setValueFormatter(new PercentFormatter());
-        data.setValueTextSize(12f);
-        data.setValueTextColor(Color.BLACK);
+        BarDataSet dataset = new BarDataSet(entries, "Calificación");
+        dataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        BarData data = new BarData(labels, dataset);
+        barChart.setData(data);
+        barChart.setDescription("Capítulos");
 
-        pieChart.setData(data);
-        pieChart.highlightValues(null);
-        pieChart.invalidate();
+
     }
 
     //Para crear la tabla de votación:

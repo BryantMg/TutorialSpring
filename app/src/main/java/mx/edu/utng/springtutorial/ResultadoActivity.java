@@ -9,6 +9,14 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import java.util.ArrayList;
+
 import mx.edu.utng.springtutorial.grafica.GraficaHelperDos;
 import mx.edu.utng.springtutorial.grafica.GraficaTopic;
 import mx.edu.utng.springtutorial.grafica.GraficoActivityDos;
@@ -21,10 +29,12 @@ public class ResultadoActivity extends Activity {
     GraficaHelperDos db= new GraficaHelperDos(this);
     GraficaTopic g= new GraficaTopic();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
 
         RatingBar bar=(RatingBar)findViewById(R.id.ratingBar1);
 //get text view
@@ -36,10 +46,12 @@ public class ResultadoActivity extends Activity {
         bar.setRating(score);
         switch (score) {
             case 1:
-
+                t.setText("Podrias hacerlo mejor");
+                break;
             case 2: t.setText("Lo siento, no has pasado satisfactoriamente el cuestionario");
                 break;
             case 3:
+                t.setText("Casi pero no es suficiente, ¿porque no estudias mas?");
                 break;
             case 4:t.setText("Tal vez deberias de probar hacer de nuevo el examen");
                 break;
@@ -47,12 +59,16 @@ public class ResultadoActivity extends Activity {
                 t.setText("Eres asombroso has pasado correctamente todo el cuestionario");
                 g.setNombre("Capitulos del 1 al 5");
                 g.setSigla("Spring");
-                g.setVotos(10);
+                g.setVotos(score);
                 db.insertResult(g);
                 break;
             default:
 
         }
+
+
+
+
     }
     
     @Override

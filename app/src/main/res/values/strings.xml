@@ -132,6 +132,16 @@
         7.- Postprocesado (post inicialización) \n
         8.- Bean listo para uso \n
         9.- Destrucción \n
+        \n\n
+
+        • Bean con inyección por constructor: \n
+
+        //tenemos un constructor con un String\n
+            public Persona(String nombre){\n
+            this.nombre = nombre;\n\n
+
+
+}
 
 
 
@@ -190,5 +200,6 @@
     <string name="titulo_tab_desarrollador">DESARROLLADOR</string>
     <string name="titulo_tab_tarjetas">TARJETAS</string>
     <string name="title_activity_maps">Map</string>
+    <string name="foruno"><![CDATA[_ _ _ (int = 0;2<i;i++){]]></string>
     <!--TABS -->
 </resources>

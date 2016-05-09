@@ -9,6 +9,7 @@ import android.view.View;
 
 import mx.edu.utng.springtutorial.configuracion.PreferenciasActivity;
 import mx.edu.utng.springtutorial.correo.EnviarCorreoActivity;
+import mx.edu.utng.springtutorial.notification.NotificationActivity;
 import mx.edu.utng.springtutorial.pagutng.UtngActivity;
 import mx.edu.utng.springtutorial.rspgame.ActivityRsp;
 import mx.edu.utng.springtutorial.sound.SoundActivity;
@@ -59,9 +60,7 @@ public class MenuActivity extends Activity {
         startActivity(new Intent(this, EnviarCorreoActivity.class));
     }
 
-    public void juego(View view) {
-        startActivity(new Intent(this, ActivityRsp.class));
-    }
+
 
 
     public void utilerias(View view) {
@@ -83,4 +82,11 @@ public class MenuActivity extends Activity {
     }
 
 
+    public void notificacion(View view) {
+        startActivity(new Intent(this, NotificationActivity.class));
+    }
+
+    public void games(View view) {
+        startActivity(new Intent(this, GameActivity.class));
+    }
 }

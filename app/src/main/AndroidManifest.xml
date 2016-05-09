@@ -79,6 +79,21 @@
             android:name=".MapsActivity"
 
             ></activity>
+        <activity android:name=".notification.NotificationActivity"></activity>
+
+        <!-- Actividades del juego palabras -->
+        <activity android:name=".adivinapalabra.Palabra1Activity"></activity>
+        <activity android:name=".adivinapalabra.Palabra2Activity"></activity>
+        <activity android:name=".adivinapalabra.Palabra3Activity"></activity>
+        <activity android:name=".adivinapalabra.Palabra4Activity"></activity>
+        <activity android:name=".adivinapalabra.Palabra5Activity"></activity>
+        <activity android:name=".adivinapalabra.Palabra6Activity"></activity>
+        <activity android:name=".adivinapalabra.FinActivity"></activity>
+
+        <activity android:name=".GameActivity"></activity>
+
+        <activity android:name=".PopResultActivity"></activity>
+
 
 
     </application>

@@ -43,6 +43,8 @@ public class Grafica extends AppCompatActivity {
         setContentView(R.layout.grafica_layout);
         dbHelper = new DbHelper(this);
 
+        grafica = (PieChart)findViewById(R.id.pieChart);
+
 
         int cfgh =
                 dbHelper.getProgreso(FormularioInterno.ID_USARIOS);
@@ -71,12 +73,12 @@ public class Grafica extends AppCompatActivity {
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
-        graficaLayout = (RelativeLayout) findViewById(R.id.grafica_layout);
-        grafica = new PieChart(this);
+        //graficaLayout = (RelativeLayout) findViewById(R.id.grafica_layout);
+        //grafica = new PieChart(this);
 
 
-        graficaLayout.addView(grafica);
-        graficaLayout.setBackgroundColor(Color.LTGRAY);
+        //graficaLayout.addView(grafica);
+        //graficaLayout.setBackgroundColor(Color.LTGRAY);
 
         grafica.setUsePercentValues(true);
         grafica.setDescription("Avance General del Curso");

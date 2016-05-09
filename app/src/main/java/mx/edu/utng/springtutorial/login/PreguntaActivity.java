@@ -21,8 +21,10 @@ import android.widget.TextView;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import mx.edu.utng.springtutorial.PopResultActivity;
 import mx.edu.utng.springtutorial.R;
 import mx.edu.utng.springtutorial.ResultadoActivity;
+import mx.edu.utng.springtutorial.pagutng.Pop;
 
 /**
  * Created by Bryant Moreno on 25/03/2016.
@@ -139,13 +141,12 @@ public class PreguntaActivity extends AppCompatActivity {
                             Log.e("preguntaActivity", "onClick: No entro we " );
                             break;
                     }
-                    Intent intent = new Intent(PreguntaActivity.this, ResultadoActivity.class);
+                    Intent intent = new Intent(PreguntaActivity.this, PopResultActivity.class);
                     Bundle b = new Bundle();
                     b.putInt("score", score); //Tu puntuacion
                     intent.putExtras(b); //Pone tu puntuacion en cada intento
                     startActivity(intent);
                     finish();
-
                 }
             }
         });
@@ -195,5 +196,11 @@ public class PreguntaActivity extends AppCompatActivity {
         qid++;
     }
 
+    public int getScore() {
+        return score;
+    }
 
+    public void setScore(int score) {
+        this.score = score;
+    }
 }

@@ -53,7 +53,7 @@ public class EnviarCorreoActivity extends Activity {
                 email.setType("text/plain");
                 //email.putExtra(Intent.EXTRA_EMAIL, new String[]{ para});
                 email.putExtra(Intent.EXTRA_SUBJECT,para);
-                email.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File("/sdcard/certificado.png")));
+                email.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File("/sdcard/certificado.jpg")));
                 email.putExtra(Intent.EXTRA_TEXT,  mensaje);
 
                 email.setType("message/rfc822");
